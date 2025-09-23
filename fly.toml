@@ -26,7 +26,5 @@ primary_region = 'cdg'
 source="uploads_data_500gb"
 path="/uploads"
 
-  [mounts]
-source="uploads_data_500gb"
-path="/uploads"
+
 
