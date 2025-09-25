@@ -25,10 +25,15 @@ const upload = multer({
   }
 });
 
+// Special middleware for lessons
 const uploadLessonFiles = upload.fields([
   { name: 'video', maxCount: 1 },
   { name: 'thumbnail', maxCount: 1 },
   { name: 'pdfs', maxCount: 10 }
 ]);
 
-module.exports = uploadLessonFiles;
+// ✅ Export both
+module.exports = {
+  upload,              // Multer instance (use .single(), .array(), etc.)
+  uploadLessonFiles    // Predefined middleware for lesson uploads
+};
