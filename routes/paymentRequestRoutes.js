@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const authenticate = require('../middleware/authenticate');
 const authenticateAdmin = require('../middleware/authenticateAdmin');
-const upload = require('../middleware/upload'); // multer configured to store screenshots
+const {upload} = require('../middleware/upload'); // multer configured to store screenshots
 const controller = require('../controllers/paymentRequestController');
 
 // student/instructor creates payment request
