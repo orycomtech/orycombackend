@@ -33,7 +33,4 @@ const uploadLessonFiles = upload.fields([
 ]);
 
 // ✅ Export both
-module.exports = {
-  upload,              // Multer instance (use .single(), .array(), etc.)
-  uploadLessonFiles    // Predefined middleware for lesson uploads
-};
+module.exports = upload;
