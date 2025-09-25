@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { getProfile, updateProfile, changePassword,adminLogin } = require("../controllers/adminController");
 const authenticateAdmin = require("../middleware/authenticateAdmin");
-const upload = require("../middleware/upload");
+const { upload } = require("../middleware/upload");
 
 // ✅ Add this check to make sure `adminController.adminLogin` is a function
 if (typeof adminLogin !== "function") {
