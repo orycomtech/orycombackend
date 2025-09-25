@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const { submitRequest, getAllRequests, updateStatus } = require("../controllers/helpController");
 const authenticate = require("../middleware/authenticate");
-const upload = require("../middleware/upload");
+const {upload} = require("../middleware/upload");
 const authenticateAdmin = require("../middleware/authenticateAdmin");
 
 // Student/Instructor submit request
