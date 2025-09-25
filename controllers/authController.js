@@ -44,10 +44,10 @@ exports.login = login;
 // ==============================
 exports.register = async (req, res) => {
   try {
-    const { name, age, email, password } = req.body;
+    const { name, age, email, password, phoneNumber, parentNumber, parentName } = req.body;
     const photo = req.file ? req.file.filename : null;
 
-    if (!name || !age || !email || !password || !photo) {
+    if (!name || !age || !email || !password || !photo || !phoneNumber || !parentNumber || !parentName) {
       return res.status(400).json({ message: "All fields including photo are required" });
     }
 
@@ -64,6 +64,9 @@ exports.register = async (req, res) => {
       email,
       password: hashedPassword,
       photo,
+      phoneNumber,
+      parentNumber,
+      parentName
     });
 
     await newUser.save();
