@@ -33,4 +33,4 @@ const uploadLessonFiles = upload.fields([
 ]);
 
 // ✅ Export both
-module.exports = upload;
+module.exports = {uploadLessonFiles, upload};
