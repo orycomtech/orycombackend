@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const lessonController = require('../controllers/lessonController');
 const uploadLessonFiles = require('../middleware/upload');
-const upload = require('../middleware/upload');
+const {upload} = require('../middleware/upload');
 const {
   createCourse,
   getAllCourses,
